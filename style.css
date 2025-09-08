@@ -1,0 +1,303 @@
+/* Importing Google Fonts for typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 2.1 - Advanced Selectors and Page Structure */
+* {
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    line-height: 1.5em;
+    color: rgb(0, 0, 0);
+}
+
+
+
+h1, h2, h3 {
+    font-family: roboto, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: roboto, sans-serif;
+}
+
+a {
+    text-decoration: underline 2px;
+    color: rgb(0, 0, 0);
+}
+
+#site-header {
+    background-color: rgba(105, 65, 150, 0.493);
+    border-bottom: rgb(193, 86, 255) 2px solid;
+    padding: 30px 0;
+}
+
+#site-footer {
+    background-color: rgba(126, 54, 185, 0.507);
+    color: black;
+    text-align: center;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+.logo {
+    max-width: auto;
+    height: auto;
+    display: flex;
+    margin: 20px auto;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    padding: 1px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(54, 54, 90, 0.507);
+    border-radius: 30px;
+}
+
+.articles > .article-card {
+    margin-bottom: 2rem;
+}
+
+input[type="email"] {
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 5px;
+    width: 40%;
+    max-width: 40%;
+}
+
+/* 2.2 - Colors, Backgrounds, and Layout Styling */
+.hero {
+    background: rgba(100, 40, 134, 0.664);
+    text-align: center;
+    padding: 6px;
+    color: rgb(43, 43, 43);
+}
+
+header nav {
+    background-color: rgba(117, 79, 160, 0.459);
+    padding: 5px ;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 2px;
+}
+
+.article-card {
+    background-color: rgba(158, 137, 196, 0.541);
+    padding: 30px;
+    border: solid   rgba(193, 86, 255, 0.637) 2px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.article-card:hover {
+    transform: scale(1.01);
+}
+
+.newsletter {
+    background-color: rgba(158, 137, 196, 0.541);
+    padding: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: nowrap;
+}
+
+.newsletter button {
+    background-color: rgba(195, 177, 204, 0.589);
+    color: black;
+    border: solid 1px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: rgba(200, 130, 235, 0.589);
+}
+
+/* 2.3 - Typography & Text Effects */
+.hero h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.intro {
+    font-style: time new roman, serif;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.article-card h3::before {
+    content: "• ";
+    color: rgb(8, 8, 8);
+}
+
+.article-card h3 {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.article-card:hover h3 {
+    color: rgb(61, 46, 46);
+}
+
+.newsletter h2 {
+    position: relative;
+    display: absolute;
+    margin-bottom: 20px;
+}
+
+.newsletter h2::after {
+    content: "•";              
+    position: relative;       
+    bottom: 0;         
+    left: 9px;           
+    width: 70vw;              
+    height: 4px;              
+    background-color: #00000000;
+}
+
+/* 2.4 - Homepage Styling */
+.articles {
+    display: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    gap: 20px;
+}
+
+.article-card {
+    flex: 1 1 250px;  
+    min-width: 250px; 
+}
+
+/* 2.5 - Adding Images & Media Styling */
+.article-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: beige;
+    transition: transform 0.3s ease-in-out;
+}
+
+.article-card img:hover {
+    transform: scale(1.05);
+}
+
+.hero {
+    background-image: linear-gradient(135deg, #ffffff, #a366a5c9);
+    background-size: 100% 100%;
+    background-position: center;
+    position: flex;
+}
+
+.hero::before {
+    content: "";
+    position: relative;   
+    top: 0;               
+    left: 0;              
+    width: 100%;          
+    height: 10%;         
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1, .hero p {
+    position: flex;
+    z-index: 12;
+}
+
+/* 2.6 - Multi-Page Navigation (Articles Page) */
+.article-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ae7abb;
+}
+
+.article-item img {
+    max-width: 100%;                  
+    height: auto;                      
+    border-radius: 20px;               
+    box-shadow: 0 4px 8px rgba(255, 97, 242, 0.3); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.article-item img:hover {
+    transform: scale(1.05);
+}
+
+.article-content {
+    flex: 1 1 250px;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;   
+        align-items: center;      
+    }
+
+    nav ul li {
+        margin: 10px 0;           
+    }
+
+    .article-card {
+        flex: 1 1 100%;         
+    }
+
+    .article-item {
+        flex-direction: column;  
+        text-align: center;       
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;       
+    }
+
+    .hero p {
+        font-size: 1rem;          
+    }
+
+    .logo {
+        max-width: 150px;         
+    }
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 1px;
+}
